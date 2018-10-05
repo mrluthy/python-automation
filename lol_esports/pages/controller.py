@@ -35,6 +35,7 @@ __author__ = "Carlos Kidman"
 from lol_esports.pages.home import HomePage
 from lol_esports.pages.league import LeaguePage
 from lol_esports.pages.teamstandings import TeamStandingsPage
+from lol_esports.pages.universe import Universe
 
 
 class Pages:
@@ -48,6 +49,7 @@ class Pages:
         self._home = HomePage(driver)
         self._league = LeaguePage(driver)
         self._teamstandings = TeamStandingsPage(driver)
+        self._universe = Universe(driver)
 
     @property
     def home(self):
@@ -60,3 +62,7 @@ class Pages:
     @property
     def teamstandings(self):
         return self._teamstandings
+
+    @property
+    def universe(self):
+        return self._universe
