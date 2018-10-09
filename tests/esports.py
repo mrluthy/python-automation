@@ -15,7 +15,8 @@ import pytest
 from framework.drivercore.driver import Driver
 from lol_esports.data import esports_api as api
 from lol_esports.pages.controller import Pages
-
+from lol_esports.pages.universe import Universe
+from lol_esports.pages.champions import Champions
 
 
 @pytest.fixture
@@ -47,4 +48,5 @@ def setup():
 def test_each_champion(setup):
     driver, pages = setup
     driver.goto("https://www.lolesports.com")
-    pages.universe
+    Universe.goto_universe_tab
+    Champions.goto_champions_tab

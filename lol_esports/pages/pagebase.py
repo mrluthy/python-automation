@@ -93,6 +93,10 @@ class PageBase:
     def goto_universe(self):
         self.basemap.riot_navbar_tab('universe').click()
 
+    def goto_champions(self):
+        self.basemap.riot_navbar_link('champions').click()
+
+
 
 class PageBaseMap:
     """Base element map to share common elements across all pages.
